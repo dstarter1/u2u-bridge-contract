@@ -1,3 +1,4 @@
+
 // We require the Hardhat Runtime Environment explicitly here. This is optional
 // but useful for running the script in a standalone fashion through `node <script>`.
 //
@@ -14,27 +15,19 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  // const U2V_U2U = await hre.ethers.getContractFactory("U2V_U2U");
-  // const u2V_U2U = await U2V_U2U.deploy();
-  // await u2V_U2U.deployed();
+//   const MultiSend = await hre.ethers.getContractFactory("MultiSend");
+//   const multiSend = await MultiSend.deploy();
+//   await multiSend.deployed();
 
-  // console.log("U2V_U2U deployed to:", u2V_U2U.address);
+//   console.log("multiSend deployed to:", multiSend.address);
 
-
-  // const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");
-  // const u2V_BSC = await U2V_BSC.deploy();
-
-  // await u2V_BSC.deployed();
-
-  // console.log("U2V_BSC deployed to:", u2V_BSC.address);
-
+//   await multiSend.approve("0x377410dC86840d66f73a32256D85B2D6901F517c","0x2fB898e6d197a54941D6266b2756d6867A629B38","10000000000000000000000000")
   
-  const U2UBridgeLock = await hre.ethers.getContractFactory("U2UBridgeLock");
-  const u2UBridgeLock = await U2UBridgeLock.deploy();
+ 
+//   const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");
+//   const u2V_BSC = await U2V_BSC.attach("0x377410dC86840d66f73a32256D85B2D6901F517c");
+//   await u2V_BSC.transfer(multiSend.address,"10000000000000000000000000");
 
-  await u2UBridgeLock.deployed();
-
-  console.log("u2UBridgeLock deployed to:", u2UBridgeLock.address);
 
   
   // const U2UBridgeMint = await hre.ethers.getContractFactory("U2UBridgeMint");
@@ -43,7 +36,10 @@ async function main() {
   // await u2UBridgeMint.deployed();
 
   // console.log("u2UBridgeMint deployed to:", u2UBridgeMint.address);
-
+  
+  const MultiSend = await hre.ethers.getContractFactory("MultiSend");
+  const multiSend = await MultiSend.attach("0x7d17dF5Cb1413e0C853f7d30DC8e55e60c62f934");
+  await multiSend.multiSend("0x377410dC86840d66f73a32256D85B2D6901F517c","0x2fB898e6d197a54941D6266b2756d6867A629B38",["0xaEEe119FCE2c692e5a6289688d918fCb60b0833A","0x9F37243260fAB4422f659d55f2c86c76AA90b5AC","0xDD47C31519Db8808A1D0855Ac5915a07ba342720"],"100000000000000000");
 
 }
 

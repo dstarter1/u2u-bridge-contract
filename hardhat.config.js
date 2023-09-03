@@ -30,7 +30,13 @@ module.exports = {
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
     bsctest: {
-      url: process.env.BSCTEST_URL || "https://rpc.ankr.com/bsc_testnet_chapel",
+      url: process.env.BSCTEST_URL || "https://bsc-testnet.publicnode.com",
+      gas:5000000,
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
+    u2utest: {
+      url: process.env.ROPSTEN_URL || "https://exchaintestrpc.okex.org",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
