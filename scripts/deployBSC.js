@@ -21,12 +21,12 @@ async function main() {
   // console.log("U2V_U2U deployed to:", u2V_U2U.address);
 
 
-  // const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");
-  // const u2V_BSC = await U2V_BSC.deploy();
+  const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");
+  const u2V_BSC = await U2V_BSC.deploy();
 
-  // await u2V_BSC.deployed();
+  await u2V_BSC.deployed();
 
-  // console.log("U2V_BSC deployed to:", u2V_BSC.address);
+  console.log("U2V_BSC deployed to:", u2V_BSC.address);
 
   
   const U2UBridgeLock = await hre.ethers.getContractFactory("U2UBridgeLock");

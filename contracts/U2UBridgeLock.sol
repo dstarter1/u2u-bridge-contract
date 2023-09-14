@@ -74,6 +74,7 @@ contract U2UBridgeLock is Ownable, ReentrancyGuard {
     }
 
     function setTokenAllow(address token, bool flag) public onlyOwner {
+        require(token != address(0), "U2U-Bridge: token is the zero address");
         isTokenAllowBridge[token] = flag;
         emit AllowTokenEvent(token, flag);
     }
@@ -83,16 +84,20 @@ contract U2UBridgeLock is Ownable, ReentrancyGuard {
         address account,
         bool flag
     ) public onlyOwner {
+        require(token != address(0), "U2U-Bridge: token is the zero address");
+        require(account != address(0), "U2U-Bridge: account is the zero address");
         isModOfToken[token][account] = flag;
         emit SetModOfTokenEvent(token, account, flag);
     }
 
     function setMinLockToken(address token, uint256 amount) public onlyOwner {
+        require(token != address(0), "U2U-Bridge: token is the zero address");
         minLockToken[token] = amount;
         emit SetMinLockEvent(token, amount);
     }
 
     function setOnlyEOACall(address token, bool flag) public onlyOwner {
+        require(token != address(0), "U2U-Bridge: token is the zero address");
         onlyEOACall[token] = flag;
         emit OnlyEOACallEvent(token, flag);
     }

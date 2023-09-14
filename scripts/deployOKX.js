@@ -14,11 +14,11 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  // const U2V_U2U = await hre.ethers.getContractFactory("U2V_U2U");
-  // const u2V_U2U = await U2V_U2U.deploy();
-  // await u2V_U2U.deployed();
+  const U2V_U2U = await hre.ethers.getContractFactory("U2V_U2U");
+  const u2V_U2U = await U2V_U2U.deploy();
+  await u2V_U2U.deployed();
 
-  // console.log("U2V_U2U deployed to:", u2V_U2U.address);
+  console.log("U2V_U2U deployed to:", u2V_U2U.address);
 
 
 //   const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");

@@ -36,7 +36,9 @@ module.exports = {
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
     u2utest: {
-      url: process.env.ROPSTEN_URL || "https://exchaintestrpc.okex.org",
+      url: process.env.ROPSTEN_URL || "https://rpc-nebulas-testnet.uniultra.xyz",
+      gas: 8000000,
+      chainId: 2484,
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
