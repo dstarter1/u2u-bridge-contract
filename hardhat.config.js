@@ -42,6 +42,20 @@ module.exports = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+    bsc: {
+      url: process.env.ROPSTEN_URL || "https://rpc.ankr.com/bsc",
+      gas: 8000000,
+      chainId: 56,
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
+    u2u: {
+      url: process.env.ROPSTEN_URL || "https://rpc-mainnet.uniultra.xyz",
+      gas: 8000000,
+      chainId: 39,
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,

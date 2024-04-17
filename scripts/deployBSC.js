@@ -21,20 +21,24 @@ async function main() {
   // console.log("U2V_U2U deployed to:", u2V_U2U.address);
 
 
-  const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");
-  const u2V_BSC = await U2V_BSC.deploy();
+  // const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");
+  // const u2V_BSC = await U2V_BSC.attach("0xeac639f6336e263dde3ed571e00d1c128634ebb0");
 
-  await u2V_BSC.deployed();
+  // await u2V_BSC.deployed();
 
-  console.log("U2V_BSC deployed to:", u2V_BSC.address);
+  // console.log("U2V_BSC deployed to:", u2V_BSC.address);
+
+
+
+  // await u2V_BSC.approve("0xf382cf0138d47523f2e7bd6d7b0afd4277697a29","2000000000000000000000000000000000")
 
   
-  const U2UBridgeLock = await hre.ethers.getContractFactory("U2UBridgeLock");
-  const u2UBridgeLock = await U2UBridgeLock.deploy();
+  // const U2UBridgeLock = await hre.ethers.getContractFactory("U2UBridgeLock");
+  // const u2UBridgeLock = await U2UBridgeLock.deploy();
 
-  await u2UBridgeLock.deployed();
+  // await u2UBridgeLock.deployed();
 
-  console.log("u2UBridgeLock deployed to:", u2UBridgeLock.address);
+  // console.log("u2UBridgeLock deployed to:", u2UBridgeLock.address);
 
   
   // const U2UBridgeMint = await hre.ethers.getContractFactory("U2UBridgeMint");
@@ -43,6 +47,11 @@ async function main() {
   // await u2UBridgeMint.deployed();
 
   // console.log("u2UBridgeMint deployed to:", u2UBridgeMint.address);
+
+    const U2V_U2U = await hre.ethers.getContractFactory("U2UNFT");
+  const u2V_U2U = await U2V_U2U.deploy();
+  await u2V_U2U.deployed();
+  console.log("NFT: "+u2V_U2U.address);
 
 
 }

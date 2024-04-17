@@ -15,11 +15,11 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-//   const MultiSend = await hre.ethers.getContractFactory("MultiSend");
-//   const multiSend = await MultiSend.deploy();
-//   await multiSend.deployed();
+  const MultiSend = await hre.ethers.getContractFactory("MultiSend");
+  const multiSend = await MultiSend.deploy();
+  await multiSend.deployed();
 
-//   console.log("multiSend deployed to:", multiSend.address);
+  console.log("multiSend deployed to:", multiSend.address);
 
 //   await multiSend.approve("0x377410dC86840d66f73a32256D85B2D6901F517c","0x2fB898e6d197a54941D6266b2756d6867A629B38","10000000000000000000000000")
   
@@ -38,15 +38,15 @@ async function main() {
   // console.log("u2UBridgeMint deployed to:", u2UBridgeMint.address);
  
     
-  const MultiSend = await hre.ethers.getContractFactory("MultiSend");
-  const multiSend = await MultiSend.attach("0x7d17dF5Cb1413e0C853f7d30DC8e55e60c62f934");
+  // const MultiSend = await hre.ethers.getContractFactory("MultiSend");
+  // const multiSend = await MultiSend.attach("0x7d17dF5Cb1413e0C853f7d30DC8e55e60c62f934");
 
 
-  const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");
-  const u2V_BSC = await U2V_BSC.attach("0xDa913Eb96D27446EC151e4B383af1F63cce1A76f");
-  await u2V_BSC.transfer(multiSend.address,"10000000000000000000000000");
+  // const U2V_BSC = await hre.ethers.getContractFactory("U2V_BSC");
+  // const u2V_BSC = await U2V_BSC.attach("0xDa913Eb96D27446EC151e4B383af1F63cce1A76f");
+  // await u2V_BSC.transfer(multiSend.address,"10000000000000000000000000");
 
-  await multiSend.approve("0xDa913Eb96D27446EC151e4B383af1F63cce1A76f","0x8B2a3680bE39fe20BAD7a423Dc1632Ca2262D60d","20000000000000000000000000")
+  // await multiSend.approve("0xDa913Eb96D27446EC151e4B383af1F63cce1A76f","0x8B2a3680bE39fe20BAD7a423Dc1632Ca2262D60d","20000000000000000000000000")
 
  // await multiSend.multiSend("0xDa913Eb96D27446EC151e4B383af1F63cce1A76f","0x8B2a3680bE39fe20BAD7a423Dc1632Ca2262D60d",["0xaEEe119FCE2c692e5a6289688d918fCb60b0833A","0x9F37243260fAB4422f659d55f2c86c76AA90b5AC","0xDD47C31519Db8808A1D0855Ac5915a07ba342720"],"100000000000000000");
 
