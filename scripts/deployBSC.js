@@ -51,7 +51,27 @@ async function main() {
     const U2V_U2U = await hre.ethers.getContractFactory("U2NFT");
   const u2V_U2U = await U2V_U2U.deploy("U2NFT-VENUS","U2N-VEN");
   await u2V_U2U.deployed();
+  await u2V_U2U.grantRole("0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6","0xA4Deb34f5E915f4407B9Db1bbaD93C60560D41dd");
+  await u2V_U2U.setBaseURI("https://ipfs-gw.u2quest.io/ipfs/QmbYpPdwExPK7LZ73uYHkGevsovZjZX6JVLkveWqa56ozH/");
   console.log("VENUS: "+u2V_U2U.address);
+
+  const u2V_U2U2 = await U2V_U2U.deploy("U2NFT-MARS","U2N-MAR");
+  await u2V_U2U2.deployed();
+  await u2V_U2U2.grantRole("0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6","0xA4Deb34f5E915f4407B9Db1bbaD93C60560D41dd");
+  await u2V_U2U2.setBaseURI("https://ipfs-gw.u2quest.io/ipfs/QmRfY9ozCeGEUJLFBj5eu98fK1SXgz2fcsVcgeJdDWcVz8/");
+  console.log("MARS: "+u2V_U2U2.address);
+
+  const u2V_U2U3 = await U2V_U2U.deploy("U2NFT-NEPTUNE","U2N-NEP");
+  await u2V_U2U3.deployed();
+  await u2V_U2U3.grantRole("0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6","0xA4Deb34f5E915f4407B9Db1bbaD93C60560D41dd");
+  await u2V_U2U3.setBaseURI("https://ipfs-gw.u2quest.io/ipfs/QmdZdv79g1h4mo9XRezTKAt9vFahyn4caFLaSCGVJzMKTA/");
+  console.log("NEP: "+u2V_U2U3.address);
+
+  const u2V_U2U4 = await U2V_U2U.deploy("U2NFT-URANUS","U2N-URA");
+  await u2V_U2U.deployed();
+  await u2V_U2U4.grantRole("0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6","0xA4Deb34f5E915f4407B9Db1bbaD93C60560D41dd");
+  await u2V_U2U4.setBaseURI("https://ipfs-gw.u2quest.io/ipfs/QmbuHWqTu7xFh7YsAE8QAd4E12932uzo8N8nhXv6Lgs23b/");
+  console.log("URANUS: "+u2V_U2U.address);
 
 
 }
