@@ -48,10 +48,10 @@ async function main() {
 
   // console.log("u2UBridgeMint deployed to:", u2UBridgeMint.address);
 
-    const U2V_U2U = await hre.ethers.getContractFactory("U2UNFT");
-  const u2V_U2U = await U2V_U2U.deploy();
+    const U2V_U2U = await hre.ethers.getContractFactory("U2NFT");
+  const u2V_U2U = await U2V_U2U.deploy("U2NFT-VENUS","U2N-VEN");
   await u2V_U2U.deployed();
-  console.log("NFT: "+u2V_U2U.address);
+  console.log("VENUS: "+u2V_U2U.address);
 
 
 }
