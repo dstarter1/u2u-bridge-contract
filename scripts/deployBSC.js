@@ -68,7 +68,7 @@ async function main() {
   console.log("NEP: "+u2V_U2U3.address);
 
   const u2V_U2U4 = await U2V_U2U.deploy("U2NFT-URANUS","U2N-URA");
-  await u2V_U2U.deployed();
+  await u2V_U2U4.deployed();
   await u2V_U2U4.grantRole("0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6","0xA4Deb34f5E915f4407B9Db1bbaD93C60560D41dd");
   await u2V_U2U4.setBaseURI("https://ipfs-gw.u2quest.io/ipfs/QmbuHWqTu7xFh7YsAE8QAd4E12932uzo8N8nhXv6Lgs23b/");
   console.log("URANUS: "+u2V_U2U4.address);
